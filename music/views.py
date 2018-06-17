@@ -49,6 +49,8 @@ def create_song(request, album_id):
                     'error_message': 'You already added that song',
                 }
                 return render(request, 'music/create_song.html', context)
+                print("123123")
+
         song = form.save(commit=False)
         song.album = album
         song.audio_file = request.FILES['audio_file']
